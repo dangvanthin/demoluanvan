@@ -12,5 +12,4 @@ pandas>=0.19
 keras==2.2.5
 pyvi
 tensorflow==1.15.0
-pandas
 keras-rectified-adam

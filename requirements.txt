@@ -9,8 +9,8 @@ scipy>=0.15.1
 scikit-learn==0.22.2.post1
 matplotlib>=1.4.3
 pandas>=0.19
-keras=2.2.5
+keras==2.2.5
 pyvi
-tensorflow=1.15.0
+tensorflow==1.15.0
 pandas
 keras-rectified-adam

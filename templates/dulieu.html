@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Phân tích dữ liệu</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../static/myapp/bootstrap.min.css">
+        <link rel="stylesheet" href="../static/myapp/results.css">
+		<script src="../static/myapp/jquery-2.0.3.min.js"></script>
+		
+		
+		<style>
+			ul {
+			  list-style-type: none;
+			  margin: 0;
+			  padding: 0;
+			  overflow: hidden;
+			  background-color:#23a9bb;
+			  align: center;
+			}
+
+			li {
+				  float:left;
+				  margin-right: 70px;
+				  margin-left: 70px;
+			}
+
+			li a {
+			  display: inline-block;
+			  color: #124046;
+			  font-size:20px;
+			  text-align: center;
+			  padding: 14px 16px;
+			  text-decoration: none;
+			  float: none;
+
+			}
+
+			li a:hover {
+			  background-color: #3f85c1;
+			}
+			 body {
+            font-family: 'Fira Sans', sans-serif;
+            background-image: url("../static/bg.png");
+			}
+			
+			.tg  {border-collapse:collapse;border-spacing:0;}
+			.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+			  overflow:hidden;padding:10px 5px;word-break:normal;}
+			.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+			  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+			.tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
+			.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+			.tg .tg-6ic8{border-color:inherit;font-weight:bold;text-align:right;vertical-align:top}
+			.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+			.tg .tg-dvpl{border-color:inherit;text-align:right;vertical-align:top}
+			
+			.tg2  {border-collapse:collapse;border-spacing:0;}
+			.tg2 td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+			  overflow:hidden;padding:10px 5px;word-break:normal;}
+			.tg2 th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+			  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+			.tg2 .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
+			.tg2 .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+			.tg2 .tg-6ic8{border-color:inherit;font-weight:bold;text-align:right;vertical-align:top}
+			.tg2 .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+			.tg2 .tg-dvpl{border-color:inherit;text-align:right;vertical-align:top}
+		</style>
+	
+		<nav class="navbar navbar-dark bg-primary justify-content-center">
+			  <div class = "img-container2"> <img style='height: 100%; width: 100%; object-fit: contain' src="../static/banner2.jpg" /></div>
+		</nav>
+		<ul>
+			<li><a href="/"><strong>Miền nhà hàng</strong></a></li>
+			<li><a href="/hoteldomain"><strong>Miền khách sạn</strong></a></li>
+			<li><a href="/dulieu"><strong>Thông tin dữ liệu</strong></a></li>
+			<li><a href="/phantichketqua"><strong>Thông tin kết quả</strong></a></li>
+		</ul>
+    </head>
+
+    <body>
+        <div class="container" >
+         
+            <div class="col-xs-8 col-xs-offset-2">
+                <h2 class="text-muted" color="red" align="center"><strong>THÔNG TIN DỮ LIỆU HUẤN LUYỆN</strong></h2>
+                <p color="blue" align="center">&nbsp;</p>
+				<h5 class="text-muted" color="green" align="center"><strong> Bảng 1 :Các thông tin về dữ liệu và phân bố tỷ lệ các khía cạnh trong bộ dữ liệu UIT_ABSA.</strong></h5>		
+
+				<table class="tg" align="center">
+				<thead>
+				  <tr>
+					<th class="tg-fymr" rowspan="2">Thông tin dữ liệu</th>
+					<th class="tg-7btt" colspan="3">Nhà hàng</th>
+					<th class="tg-7btt" colspan="3">Khách sạn</th>
+				  </tr>
+				  <tr>
+					<td class="tg-6ic8">Huấn luyện</td>
+					<td class="tg-6ic8">Phát triển</td>
+					<td class="tg-6ic8">Kiểm thử</td>
+					<td class="tg-6ic8">Huấn luyện</td>
+					<td class="tg-6ic8">Phát triển</td>
+					<td class="tg-6ic8">Kiểm thử</td>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<td class="tg-0pky">Tổng số bình luận</td>
+					<td class="tg-dvpl">7 028</td>
+					<td class="tg-dvpl">771</td>
+					<td class="tg-dvpl">1 938</td>
+					<td class="tg-dvpl">7 180</td>
+					<td class="tg-dvpl">795</td>
+					<td class="tg-dvpl">2 030</td>
+				  </tr>
+				  <tr>
+					<td class="tg-0pky">Tổng số tokens</td>
+					<td class="tg-dvpl">115 753</td>
+					<td class="tg-dvpl">12 669</td>
+					<td class="tg-dvpl">31 784</td>
+					<td class="tg-dvpl">131 020</td>
+					<td class="tg-dvpl">14 739</td>
+					<td class="tg-dvpl">37 083</td>
+				  </tr>
+				  <tr>
+					<td class="tg-0pky">Tổng số từ vựng</td>
+					<td class="tg-dvpl">9 260</td>
+					<td class="tg-dvpl">2 834</td>
+					<td class="tg-dvpl">4 679</td>
+					<td class="tg-dvpl">4 034</td>
+					<td class="tg-dvpl">1 570</td>
+					<td class="tg-dvpl">2 437</td>
+				  </tr>
+				  <tr>
+					<td class="tg-0pky">Tổng số loại khía cạnh</td>
+					<td class="tg-dvpl">9 458</td>
+					<td class="tg-dvpl">1 053</td>
+					<td class="tg-dvpl">2 629</td>
+					<td class="tg-dvpl">11 812</td>
+					<td class="tg-dvpl">1 318</td>
+					<td class="tg-dvpl">3 283</td>
+				  </tr>
+				  <tr>
+					<td class="tg-0pky">Số khía cạnh trung bình/bình luận</td>
+					<td class="tg-dvpl">1.35</td>
+					<td class="tg-dvpl">1.48</td>
+					<td class="tg-dvpl">1.36</td>
+					<td class="tg-dvpl">1.65</td>
+					<td class="tg-dvpl">1.66</td>
+					<td class="tg-dvpl">1.62</td>
+				  </tr>
+				  <tr>
+					<td class="tg-0pky">Độ dài trung bình</td>
+					<td class="tg-dvpl">16.47</td>
+					<td class="tg-dvpl">17.82</td>
+					<td class="tg-dvpl">16.40</td>
+					<td class="tg-dvpl">18.25</td>
+					<td class="tg-dvpl">18.54</td>
+					<td class="tg-dvpl">18.27</td>
+				  </tr>
+				</tbody>
+				</table>
+				<br> </br>
+				<h5 class="text-muted" color="green" align="center"><strong> Bảng 2 :Các thông tin về dữ liệu và phân bố tỷ lệ các khía cạnh trong bộ dữ liệu VLSP 2018.</strong></h5>		
+				<table class="tg2" align="center">
+				<thead>
+				  <tr>
+					<th class="tg-fymr" rowspan="2">Thông tin dữ liệu</th>
+					<th class="tg-7btt" colspan="3">Nhà hàng</th>
+					<th class="tg-7btt" colspan="3">Khách sạn</th>
+				  </tr>
+				  <tr>
+					<td class="tg-6ic8">Huấn luyện</td>
+					<td class="tg-6ic8">Phát triển</td>
+					<td class="tg-6ic8">Kiểm thử</td>
+					<td class="tg-6ic8">Huấn luyện</td>
+					<td class="tg-6ic8">Phát triển</td>
+					<td class="tg-6ic8">Kiểm thử</td>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<td class="tg-0pky">Tổng số bình luận</td>
+					<td class="tg-dvpl">2 961</td>
+					<td class="tg-dvpl">1 290</td>
+					<td class="tg-dvpl">500</td>
+					<td class="tg-dvpl">3 000</td>
+					<td class="tg-dvpl">600</td>
+					<td class="tg-dvpl">500</td>
+				  </tr>
+				  <tr>
+					<td class="tg-0pky">Tổng số tokens</td>
+					<td class="tg-dvpl">147 706</td>
+					<td class="tg-dvpl">59 102</td>
+					<td class="tg-dvpl">76 755</td>
+					<td class="tg-dvpl">105 919</td>
+					<td class="tg-dvpl">11 907</td>
+					<td class="tg-dvpl">30 046</td>
+				  </tr>
+				  <tr>
+					<td class="tg-0pky">Tổng số từ vựng</td>
+					<td class="tg-dvpl">5 168</td>
+					<td class="tg-dvpl">3 398</td>
+					<td class="tg-dvpl">3 375</td>
+					<td class="tg-dvpl">3 908</td>
+					<td class="tg-dvpl">2 745</td>
+					<td class="tg-dvpl">1 631</td>
+				  </tr>
+				  <tr>
+					<td class="tg-0pky">Tổng số loại khía cạnh</td>
+					<td class="tg-dvpl">9 034</td>
+					<td class="tg-dvpl">3 408</td>
+					<td class="tg-dvpl">2 419</td>
+					<td class="tg-dvpl">13 948</td>
+					<td class="tg-dvpl">7 111</td>
+					<td class="tg-dvpl">2 584</td>
+				  </tr>
+				  <tr>
+					<td class="tg-0pky">Số khía cạnh trung bình/bình luận</td>
+					<td class="tg-dvpl">3.05</td>
+					<td class="tg-dvpl">2.64</td>
+					<td class="tg-dvpl">4.38</td>
+					<td class="tg-dvpl">4.65</td>
+					<td class="tg-dvpl">11.85</td>
+					<td class="tg-dvpl">5.17</td>
+				  </tr>
+				  <tr>
+					<td class="tg-0pky">Độ dài trung bình</td>
+					<td class="tg-dvpl">54</td>
+					<td class="tg-dvpl">50</td>
+					<td class="tg-dvpl">163</td>
+					<td class="tg-dvpl">47</td>
+					<td class="tg-dvpl">23</td>
+					<td class="tg-dvpl">30</td>
+				  </tr>
+				</tbody>
+				</table>
+				
+            </div>
+			
+
+  
+    </div>
+           <p width="20px" color="blue" align="center">&nbsp;</p>
+           <p color="blue" align="center">&nbsp;</p>
+           <p color="blue" align="center">&nbsp;</p>
+    </body>
+</html>

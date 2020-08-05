@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Aspect based Sentiment Analysis</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../static/myapp/bootstrap.min.css">
+        <link rel="stylesheet" href="../static/myapp/results.css">
+		     <script src="../static/myapp/jquery-2.0.3.min.js"></script>
+        <link rel="stylesheet" href="../static/myapp/font-awesome-4.7.0/css/font-awesome.css">
+        
+		<style>
+			.button {
+				  background-color: #286090;
+				  border: none;
+				  color: white;
+				  border-color: #2e6da4;
+				  position: absolute;
+				  right: 0;
+				  text-align: center;
+				  display: inline-block;
+				  font-size: 16px;
+				  margin: 4px 2px;
+				  cursor: pointer;
+			}
+			.button2 {
+				  background-color: #286090;
+				  border : none;
+				  border-color: #2e6da4;
+				  color: white;
+				  position: absolute;
+				  left: 10;
+				  text-align: center;
+				  display: inline-block;
+				  font-size: 16px;
+				  margin: 4px 2px;
+				  cursor: pointer;
+			}
+			ul {
+			  list-style-type: none;
+			  margin: 0;
+			  padding: 0;
+			  overflow: hidden;
+			  background-color: #23a9bb;
+			  align: center;
+			}
+
+			li {
+				  float:left;
+				  margin-right: 70px;
+				  margin-left: 70px;
+			}
+
+			li a {
+			  display: inline-block;
+			  color: #124046;
+			  font-size:20px;
+			  text-align: center;
+			  padding: 14px 16px;
+			  text-decoration: none;
+			  float: none;
+
+			}
+
+			li a:hover {
+			  background-color: #3f85c1;
+			}
+			body {
+            font-family: 'Fira Sans', sans-serif;
+            background-image: url("../static/bg.png");
+           }
+        
+		</style>
+	
+		<nav class="navbar navbar-dark bg-primary justify-content-center">
+			  <div class = "img-container2"> <img style='height: 100%; width: 100%; object-fit: contain' src="../static/banner2.jpg" /></div>
+		</nav>
+		<ul>
+		<li><a href="/"><strong>Miền nhà hàng</strong></a></li>
+		<li><a href="/hoteldomain"><strong>Miền khách sạn</strong></a></li>
+		<li><a href="/dulieu"><strong>Thông tin dữ liệu</strong></a></li>
+		<li><a href="/phantichketqua"><strong>Thông tin kết quả</strong></a></li>
+		</ul>
+</head>
+
+<body>
+<body>
+<div>
+    <div class="col-xs-8 col-xs-offset-2">
+                 <h2 class="text-muted" color="blue" align="center"><strong>KẾT QUẢ DỰ ĐOÁN MIỀN NHÀ HÀNG</strong></h2>
+                <form method="POST">
+						<textarea name="query" id ="query" rows="3" cols="110" wrap="soft" placeholder="Nhập văn bản cần dự đoán" style="margin: 0px; width: 900px; height: 150px;">{{data[0].query}}</textarea>			
+						
+						<button class="button" value="Dự đoán" type="submit">Dự đoán</button>	
+
+						
+						<p style="color:red" align="center">&nbsp;</p>
+						<p style="color:red" align="center">&nbsp;</p>
+					
+                </form>
+				
+				
+				<h3 class="text-muted" style="color:green" align="center"><strong>Nhãn hệ thống dự đoán</strong></h3>
+				<h3 class="text-muted" style="color:green" align="center"><strong>{{data[0].label}}</strong></h3>
+
+				<p style="color:red" align="center">&nbsp;</p>
+				<p style="color:red" align="center">&nbsp;</p>
+
+				
+    </div>
+</div>
+</body>
+</html>
